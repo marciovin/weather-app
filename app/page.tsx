@@ -67,7 +67,8 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-background flex flex-col items-center justify-start pt-20 px-4">
+    <div className={`min-h-screen bg-background flex flex-col items-center px-4 transition-all duration-500 ${weatherData ? 'justify-start pt-20' : 'justify-center'}`}>
+
 
       {/* header */}
       <div className="flex gap-2 w-full max-w-md relative">
