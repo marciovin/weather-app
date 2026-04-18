@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
-import { MapIcon } from 'lucide-react'
+import { MapIcon, CircleSmall } from 'lucide-react'
 import { ThemeToggle } from '@/components/ThemeToggle'
 
 interface WeatherData {
@@ -105,10 +105,12 @@ export default function Home() {
 
             <div className="flex items-start justify-between mb-5">
               <div>
-                <p className="text-lg font-medium">{weatherData.name}</p>
+                <p className="text-xl font-extrabold">{weatherData.name}</p>
                 <p className="text-sm text-muted-foreground">{weatherData.sys.country}</p>
               </div>
-              <span className="text-xs text-muted-foreground mt-1">agora</span>
+              <span className="text-xl text-muted-foreground gap-0.5 mt-1">
+                <CircleSmall className="text-green-400 text-sm inline" /> agora
+              </span>
             </div>
 
             <div className="mb-5">
